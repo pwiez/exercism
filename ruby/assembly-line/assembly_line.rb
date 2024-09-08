@@ -6,10 +6,10 @@ class AssemblyLine
   def production_rate_per_hour
     production = @speed * 221
     case @speed
-      when 1..4 then return production
-      when 5..8 then return production*0.9
-      when 9 then return production*0.8
-      when 10 then return production*0.77
+    when 1..4 then production
+    when 5..8 then production * 0.9
+    when 9 then production * 0.8
+    when 10 then production * 0.77
     end
   end
 

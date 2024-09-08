@@ -7,8 +7,9 @@ module Port
 
   def self.get_terminal(ship_identifier)
     id = ship_identifier.to_s.slice(0..2)
-    if id == "OIL" or id == "GAS" then :A
-    else :B
+    if %w[OIL GAS].include?(id) then :A
+    else
+      :B
     end
   end
 end

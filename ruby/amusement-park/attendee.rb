@@ -4,12 +4,10 @@ class Attendee
     @pass_id = nil
   end
 
-  def height
-    @height
-  end
+  attr_reader :height
 
   def pass_id
-    @pass_id unless @pass_id == nil
+    @pass_id unless @pass_id.nil?
   end
 
   def issue_pass!(pass_id)
